@@ -39,13 +39,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -65,11 +59,16 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'reference-guide/intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Developer Guide',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'api',
+            label: 'API',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -84,38 +83,42 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Developer Guide',
+                to: '/docs/reference-guide/intro',
+              },
+              {
+                label: 'API',
+                to: '/docs/api/intro'
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Forum',
+                href: 'https://community.wandb.ai/?_gl=1*rhy5cu*_ga*MjQzNTM2NTgwLjE2NTQwMTQ1NzA.*_ga_JH1SJHJQXJ*MTY2NjIxNjI5My4yMTYuMS4xNjY2MjE2MzA0LjQ5LjAuMA..',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Blog',
+                href: 'https://wandb.ai/fully-connected',
+              },
+            ],
+          },
+          {
+            title: 'Media',
+            items: [
+              {
+                label: 'Podcast',
+                href: 'https://wandb.ai/fully-connected/podcast',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
+                to: 'https://twitter.com/weights_biases?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/c/WeightsBiases',
               },
             ],
           },
