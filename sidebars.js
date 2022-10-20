@@ -18,29 +18,37 @@ const sidebars = {
 
   referenceSidebar: [
     'reference-guide/intro',
+    // {
+    //   type: 'category',
+    //   label: 'Reference Guide',
+    //   items: [
+      {
+        type: 'category',
+        label: 'Artifacts',
+        items: [
+          'reference-guide/artifacts/construct-artifacts'
+        ]
+      },
+      {
+        type: 'category',
+        label: 'Tune Hyperparameters',
+        items: [
+          'reference-guide/tune-hyperparameters/define-sweep-configuration'
+        ]
+      }
+    //   ],
+    // }
+  ],
+
+  api: [
+    'api/intro',
     {
       type: 'category',
-      label: 'Reference Guide',
+      label: 'Python Library',
       items: [
-        {
-          type: 'category',
-          label: 'Artifacts',
-          items: [
-            'reference-guide/artifacts/construct-artifacts'
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Tune Hyperparameters',
-          items: [
-            'reference-guide/tune-hyperparameters/define-sweep-configuration'
-          ]
-        }
-      ],
+        'api/sdk/data-types'
+      ]
     }
-  ],
-  api: [
-    'api/intro'
   ]
 };
 
